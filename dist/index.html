@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="//at.alicdn.com/t/font_1091700_ve4nx3kj2t.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.3.0/Tween.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.13.2/dist/av-min.js"></script>
+        <link rel="stylesheet" href="./css/resume.css">
+        <link rel="stylesheet" href="./css/loading.css">
+        <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    </head>
+    <body>
+        <div id="siteWelcome" class="site_welcome active">
+            <div class="loading"></div>
+        </div>
+        <header>
+            <div id="topNav" class="topNavBar">
+                <div class="topNavBar_inner clearfix">
+                    <a class="logo" href="#"><span class="rs">RS</span>card</a>
+                    <nav class="menu">
+                        <ul class="navigation">
+                            <li><a href="#profile">关于</a></li>
+                            <li><a href="#skill">技能</a></li>
+                            <li class="sub_hold">
+                                <a href="#myPortfolio">作品</a>
+                                <ul class="sub_menu">
+                                    <li>作品1</li>
+                                    <li>作品2</li>
+                                    <li>作品3</li>
+                                </ul>
+                            </li>
+                            <li class="sub_hold">
+                                <a href="#">博客</a>
+                                <ul class="sub_menu">
+                                    <li>博客1</li>
+                                    <li>博客2</li>
+                                    <li>博客3</li>
+                                </ul>
+                            </li>
+                            <li><a href="#">日历</a></li>
+                            <li><a href="#">联系方式</a></li>
+                            <li><a href="#messagebox">留言板</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="head_bg"></div>
+        </header>
+        <div class="contents_main">
+            <main>
+                <div data-x class="user" id="profile">
+                    <div class="user_inner">
+                        <div class="usercard clearfix">
+                            <div class="photo"><img src="./img/live-long-and-prosper-225.png" width="299" alt="photo of mine"></div>
+                            <div class="id_text">
+                                <span>Hello</span>
+                                <h1>JIANG XIAO</h1>
+                                <p>见习前端工程师</p>
+                                <hr>
+                                <dl class="clearfix">
+                                    <dt>年龄</dt>
+                                    <dd>23</dd>
+                                    <dt>所在城市</dt>
+                                    <dd>日本</dd>
+                                    <dt>邮箱</dt>
+                                    <dd>12345@gmail.com</dd>
+                                    <dt>手机</dt>
+                                    <dd>1234567</dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <footer>
+                            <div class="contact">
+                                <a href="#">
+                                    <svg class="icon" aria-hidden="true">
+                                        <use xlink:href="#icon-github"></use>
+                                    </svg>
+                                </a>
+                                <a href="#">
+                                    <svg class="icon" aria-hidden="true">
+                                        <use xlink:href="#icon-weibo"></use>
+                                    </svg>
+                                </a>
+                                <a href="#">
+                                    <svg class="icon" aria-hidden="true">
+                                        <use xlink:href="#icon-twitter"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+                <p class="text_download">
+                    <a href="#" download="">DOWNLOAD RESUME</a>
+                </p>
+                <p class="intro">毕业于山东大学。现在日留学。网页设计实习中。</p>
+            </main>
+            <div class="sub_contents">
+                <div data-x class="skills" id="skill">
+                    <h2 class="sub_ttl">技能</h2>
+                    <ul class="clearfix">
+                        <li>HTML & CSS<span class="bar"></span></li>
+                        <li>JavaScript<span class="bar"></span></li>
+                        <li>WordPress<span class="bar"></span></li>
+                        <li>Photoshop<span class="bar"></span></li>
+                        <li>jQuery<span class="bar"></span></li>
+                        <li>Vue<span class="bar"></span></li>
+                    </ul>
+                </div>
+                <div data-x class="portfolio" id="myPortfolio">
+                    <h2 class="sub_ttl">作品集</h2>
+                    <ul>
+                        <li id="portall">所有</li>
+                        <li id="portframe">框架</li>
+                        <li id="portvallina">原生JS&CSS</li>
+                        <div id="portbar" class="select_bar state_1"></div>
+                    </ul>
+                
+                    <script>
+                        portall.onclick=function(){
+                            portbar.className="select_bar state_1"
+                        }
+                        portframe.onclick=function(){
+                            portbar.className="select_bar state_2"
+                        }
+                        portvallina.onclick=function(){
+                            portbar.className="select_bar state_3"
+                        }
+                    </script>
+                    <!--轮播-->
+                    <div id="mySwiper" class="swiper-container">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide"><img src="./img/nav.jpg" width="500"></div>
+                            <div class="swiper-slide"><img src="./img/canvas.jpg" width="500"></div>
+                            <div class="swiper-slide"><img src="./img/slideshow.jpg" width="500"></div>
+                        </div>
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                    </div>
+                </div>
+                <div id="messagebox">
+                    <h2 class="sub_ttl">留言</h2>
+                    <h3>All Comments</h3>
+                    <ul id="commentList"> 
+                    </ul>
+                    <form id="postMessageForm">
+                        <label>用户名：</label>
+                        <input type="text" name="username">
+                        <label>评论：</label>
+                        <input type="text" name="content">
+                        <input type="submit" value="提交">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="./js/welcome-animation.js"></script>
+        <script type="text/javascript" src="./js/div-slowly-slide.js"></script>
+        <script type="text/javascript" src="./js/topbar-sticky.js"></script>
+        <script type="text/javascript" src="./js/submenu-show.js"></script>
+        <script type="text/javascript" src="./js/onclick-slideto-Div.js"></script>
+        <script type="text/javascript" src="./js/init-swiper.js"></script>
+        <script type="text/javascript" src="./js/message.js"></script>
+    </body>
+</html>
